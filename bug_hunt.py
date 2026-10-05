@@ -1,11 +1,16 @@
 count = 1
 total = 0
 
-# BUG: The while line was missing a colon at the end (SyntaxError). I added ":" after the condition.
-# BUG: The condition was count < 5, so the loop stopped before adding 5 and gave 10 instead of 15 (no error shown). I changed it to count <= 5.
+# BUG: The while statement was missing a colon (:).
+# I added the colon so the while loop can run correctly.
 while count <= 5:
     total = total + count
+
+    # BUG: The original condition was count < 5,
+    # which stopped the loop before adding 5.
+    # I changed it to count <= 5 so that 5 is included.
     count = count + 1
 
-# BUG: Using + to join a string and an integer causes a TypeError. I wrapped total in str() so it can be joined to the text.
+# BUG: total is an integer, so it cannot be joined directly
+# to a string using +. I converted total to a string using str().
 print("Sum of 1 to 5 is: " + str(total))
