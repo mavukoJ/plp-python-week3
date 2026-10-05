@@ -14,7 +14,7 @@ for score in scores:
     else:
         grade = "F"
 
-    print(f"Score: {score} - Grade: {grade}")
+    print("Score:", score, "Grade:", grade)
 
     if score >= 50:
         passed = passed + 1
@@ -25,6 +25,6 @@ for score in scores:
 
 average = total / len(scores)
 
-print(f"Passed: {passed}")
-print(f"Failed: {failed}")
-print(f"Average: {round(average, 1)}")
+print("Passed:", passed)
+print("Failed:", failed)
+print("Average:", round(average, 1))
